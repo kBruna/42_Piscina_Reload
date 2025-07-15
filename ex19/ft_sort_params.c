@@ -6,11 +6,9 @@
 /*   By: buehara <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 14:32:22 by buehara           #+#    #+#             */
-/*   Updated: 2025/07/11 17:34:16 by buehara          ###   ########.fr       */
+/*   Updated: 2025/07/15 20:16:41 by buehara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
