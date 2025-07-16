@@ -6,7 +6,7 @@
 /*   By: buehara <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 15:35:08 by buehara           #+#    #+#             */
-/*   Updated: 2025/07/16 16:37:23 by buehara          ###   ########.fr       */
+/*   Updated: 2025/07/16 17:20:32 by buehara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ void	ft_putstr(char *str)
 
 int	main(int argc, char **argv)
 {
-	int	fd;
+	int		fd;
 	char	str[BUFFER_DATA];
-	int	bytes_read;
+	int		bytes_read;
 
 	if (argc == 2)
 	{

@@ -6,17 +6,17 @@
 /*   By: buehara <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 13:11:12 by buehara           #+#    #+#             */
-/*   Updated: 2025/07/11 14:04:41 by buehara          ###   ########.fr       */
+/*   Updated: 2025/07/16 17:15:37 by buehara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(char *str);
+int	ft_strlen(char *str);
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
 	int	count;
 
-    count = 0;
+	count = 0;
 	while (*str)
 	{
 		count++;

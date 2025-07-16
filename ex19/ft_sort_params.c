@@ -6,7 +6,7 @@
 /*   By: buehara <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 14:32:22 by buehara           #+#    #+#             */
-/*   Updated: 2025/07/15 20:16:41 by buehara          ###   ########.fr       */
+/*   Updated: 2025/07/16 17:19:52 by buehara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,26 +51,26 @@ void	ft_swap(int *a, int *b)
 void	ft_sort_params(int argc, char **argv, int *args)
 {
 	int	ctrl_out;
-    int ctrl_in;
-    int swap;
+	int	ctrl_in;
+	int	swap;
 
 	ctrl_out = 0;
 	while (ctrl_out < argc - 2)
-    {
-        swap = 0;
-        ctrl_in = 1;
-        while (ctrl_in < (argc - ctrl_out - 1))
-        {
-		    if (ft_strcmp(argv[ctrl_in], argv[ctrl_in + 1]) > 0)
-            {
-			    ft_swap(&args[ctrl_in - 1], &args[ctrl_in]);
-                swap = 1;
-            }
-		    ctrl_in++;
-        }
-        ctrl_out++;
-        if (swap == 0)
-            break;
+	{
+		swap = 0;
+		ctrl_in = 1;
+		while (ctrl_in < (argc - ctrl_out - 1))
+		{
+			if (ft_strcmp(argv[ctrl_in], argv[ctrl_in + 1]) > 0)
+			{
+				ft_swap(&args[ctrl_in - 1], &args[ctrl_in]);
+				swap = 1;
+			}
+			ctrl_in++;
+		}
+		ctrl_out++;
+		if (swap == 0)
+			break ;
 	}
 }
 
@@ -81,12 +81,12 @@ int	main(int argc, char **argv)
 
 	if (argc > 1)
 	{
-        ctrl = 1;
-        while (argc > ctrl)
-        {
-            args[ctrl - 1] = ctrl;
-            ctrl++;
-        }
+		ctrl = 1;
+		while (argc > ctrl)
+		{
+			args[ctrl - 1] = ctrl;
+			ctrl++;
+		}
 		ft_sort_params(argc, argv, args);
 		ctrl = 0;
 		while (ctrl < argc - 1)
