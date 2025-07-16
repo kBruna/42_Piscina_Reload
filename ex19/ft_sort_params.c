@@ -50,20 +50,27 @@ void	ft_swap(int *a, int *b)
 
 void	ft_sort_params(int argc, char **argv, int *args)
 {
-	int	ctrl;
+	int	ctrl_out;
+    int ctrl_in;
+    int swap;
 
-	ctrl = 1;
-	while (argc > ctrl)
-	{
-		args[ctrl - 1] = ctrl;
-		ctrl++;
-	}
-	ctrl = 1;
-	while (ctrl < argc - 1)
-	{
-		if (ft_strcmp(argv[ctrl], argv[ctrl + 1]) > 0)
-			ft_swap(&args[ctrl - 1], &args[ctrl]);
-		ctrl++;
+	ctrl_out = 0;
+	while (ctrl_out < argc - 2)
+    {
+        swap = 0;
+        ctrl_in = 1;
+        while (ctrl_in < (argc - ctrl_out - 1))
+        {
+		    if (ft_strcmp(argv[ctrl_in], argv[ctrl_in + 1]) > 0)
+            {
+			    ft_swap(&args[ctrl_in - 1], &args[ctrl_in]);
+                swap = 1;
+            }
+		    ctrl_in++;
+        }
+        ctrl_out++;
+        if (swap == 0)
+            break;
 	}
 }
 
@@ -72,8 +79,14 @@ int	main(int argc, char **argv)
 	int	ctrl;
 	int	args[100];
 
-	if (argc > 0)
+	if (argc > 1)
 	{
+        ctrl = 1;
+        while (argc > ctrl)
+        {
+            args[ctrl - 1] = ctrl;
+            ctrl++;
+        }
 		ft_sort_params(argc, argv, args);
 		ctrl = 0;
 		while (ctrl < argc - 1)
