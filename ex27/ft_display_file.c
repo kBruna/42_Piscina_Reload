@@ -6,13 +6,13 @@
 /*   By: buehara <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 15:35:08 by buehara           #+#    #+#             */
-/*   Updated: 2025/07/16 19:02:10 by buehara          ###   ########.fr       */
+/*   Updated: 2025/07/16 19:58:59 by buehara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <fcntl.h>
-#define BUFFER_DATA 1000
+#define BUFFER_DATA 10000
 
 void	ft_putstr(char *str);
 
