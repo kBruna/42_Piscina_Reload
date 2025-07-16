@@ -6,7 +6,7 @@
 /*   By: buehara <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 14:32:22 by buehara           #+#    #+#             */
-/*   Updated: 2025/07/16 18:56:16 by buehara          ###   ########.fr       */
+/*   Updated: 2025/07/16 19:43:22 by buehara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,6 @@ void	ft_putchar(char c);
 void	ft_putstr(char *str);
 int		ft_strcmp(char *s1, char *s2);
 void	ft_swap(int *a, int *b);
-
-#include <unistd.h>
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 void	ft_putstr(char *str)
 {
@@ -61,13 +55,13 @@ void	ft_sort_params(int argc, char **argv, int *args)
 	int	ctrl_out;
 	int	ctrl_in;
 
-	ctrl_out = 0;
-	while (ctrl_out < argc)
+	ctrl_out = 1;
+	while (ctrl_out < argc - 1)
 	{
 		ctrl_in = ctrl_out + 1;
-		while (argc - 1 > ctrl_in)
+		while (ctrl_in < argc)
 		{
-			if (ft_strcmp(argv[ctrl_out], argv[ctrl_in]) > 0)
+			if (ft_strcmp(argv[args[ctrl_out]], argv[args[ctrl_in]]) > 0)
 			{
 				ft_swap(&args[ctrl_out], &args[ctrl_in]);
 			}
