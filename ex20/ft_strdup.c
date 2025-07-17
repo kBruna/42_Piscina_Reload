@@ -6,7 +6,7 @@
 /*   By: buehara <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 14:02:45 by buehara           #+#    #+#             */
-/*   Updated: 2025/07/17 10:40:09 by buehara          ###   ########.fr       */
+/*   Updated: 2025/07/17 11:13:52 by buehara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strdup(char *src)
 		len++;
 		ctrl++;
 	}
-	ptr = malloc((len + 1) * sizeof(char));
+	ptr = (char *)malloc((len + 1) * sizeof(char));
 	ctrl = 0;
 	while (src[ctrl] != '\0')
 	{
@@ -42,8 +42,11 @@ char	*ft_strdup(char *src)
 int	main(void)
 {
 	char	origin[] = "String Original!";
+	char	*ptr;
 
-	printf("%s\n", ft_strdup(origin));
+	ptr = ft_strdup(origin);
+	printf("%s\n", ptr);
 	printf("%s\n", strdup(origin));
+	free(ptr);
 	return (0);
 }*/
