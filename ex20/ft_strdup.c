@@ -6,7 +6,7 @@
 /*   By: buehara <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 14:02:45 by buehara           #+#    #+#             */
-/*   Updated: 2025/07/17 11:44:29 by buehara          ###   ########.fr       */
+/*   Updated: 2025/07/17 11:55:41 by buehara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strdup(char *src);
 
-int	ft_strlen(char *src);
+int		ft_strlen(char *src);
 
 int	ft_strlen(char *src)
 {
