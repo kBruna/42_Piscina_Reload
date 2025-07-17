@@ -6,7 +6,7 @@
 /*   By: buehara <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/16 15:35:08 by buehara           #+#    #+#             */
-/*   Updated: 2025/07/16 19:58:59 by buehara          ###   ########.fr       */
+/*   Updated: 2025/07/17 10:44:57 by buehara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ int	main(int argc, char **argv)
 		}
 	}
 	else if (argc == 1)
-		ft_putstr("File name missing.");
+		ft_putstr("File name missing.\n");
 	else
-		ft_putstr("Too many arguments");
+		ft_putstr("Too many arguments.\n");
 	return (0);
 }
