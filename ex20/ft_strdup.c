@@ -6,13 +6,30 @@
 /*   By: buehara <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 14:02:45 by buehara           #+#    #+#             */
-/*   Updated: 2025/07/17 11:13:52 by buehara          ###   ########.fr       */
+/*   Updated: 2025/07/17 11:44:29 by buehara          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
 char	*ft_strdup(char *src);
+
+int	ft_strlen(char *src);
+
+int	ft_strlen(char *src)
+{
+	int	ctrl;
+	int	count;
+
+	ctrl = 0;
+	count = 0;
+	while (src[ctrl] != '\0')
+	{
+		count++;
+		ctrl++;
+	}
+	return (count);
+}
 
 char	*ft_strdup(char *src)
 {
@@ -21,12 +38,10 @@ char	*ft_strdup(char *src)
 	char	*ptr;
 
 	ctrl = 0;
-	while (src[ctrl] != '\0')
-	{
-		len++;
-		ctrl++;
-	}
-	ptr = (char *)malloc((len + 1) * sizeof(char));
+	len = ft_strlen(src);
+	ptr = malloc((len + 1) * sizeof(char));
+	if (ptr == NULL)
+		return (NULL);
 	ctrl = 0;
 	while (src[ctrl] != '\0')
 	{
@@ -45,8 +60,8 @@ int	main(void)
 	char	*ptr;
 
 	ptr = ft_strdup(origin);
-	printf("%s\n", ptr);
-	printf("%s\n", strdup(origin));
+	printf("PTR: %s\n", ptr);
+	printf("Original: %s\n", strdup(origin));
 	free(ptr);
 	return (0);
 }*/
